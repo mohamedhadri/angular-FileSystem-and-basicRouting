@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./child-comp.component.css']
 })
 export class ChildCompComponent {
-
+  selected = 'option2';
 }
