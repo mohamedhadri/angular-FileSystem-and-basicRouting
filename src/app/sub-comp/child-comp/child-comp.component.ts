@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {TestService} from "../../test.service";
 
 @Component({
   selector: 'app-child-comp',
@@ -7,4 +8,7 @@ import { Component } from '@angular/core';
 })
 export class ChildCompComponent {
   selected = 'option2';
+  constructor(private testService: TestService) {
+    this.testService.get();
+  }
 }

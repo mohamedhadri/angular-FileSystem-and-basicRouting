@@ -4,19 +4,22 @@ import { SubCompComponent } from './sub-comp.component';
 import { ChildCompModule } from './child-comp/child-comp.module';
 
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
- 
+import {TestService} from "../test.service";
+import {RouterModule} from "@angular/router";
+
 
 @NgModule({
   declarations: [
     SubCompComponent,
-  
+
   ],
   imports: [
     CommonModule,
     ChildCompModule,
-    MatSlideToggleModule
-   
-   
+    MatSlideToggleModule,
+    RouterModule
+
+
   ],
    exports: [ SubCompComponent ],
 })

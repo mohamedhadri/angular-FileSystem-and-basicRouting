@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {TestService} from "../test.service";
 
 @Component({
   selector: 'app-sub-comp',
