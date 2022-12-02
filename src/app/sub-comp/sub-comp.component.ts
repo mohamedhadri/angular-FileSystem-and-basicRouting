@@ -9,15 +9,19 @@ import {Observable, zip} from "rxjs";
   styleUrls: ['./sub-comp.component.css']
 })
 export class SubCompComponent {
+  tasks: any[];
   constructor(private testService: TestService) {
-    const rer1$: Observable<any>  = this.testService.getTask(1)
+   /* const rer1$: Observable<any>  = this.testService.getTask(1)
     const rer2$: Observable<any>  = this.testService.getTask(2)
     const rer3$: Observable<any> = this.testService.getTask(3)
     const resZip = zip(rer1$, rer2$, rer3$);
     resZip.subscribe(res => {
       console.log(res)
     }, error => console.log(error))
-    console.log('66666')
+    console.log('66666')*/
+    this.testService.getTasks().subscribe((res: HttpResponse<any>) => {
+      this.tasks = res.body;
+    })
   }
 
 }

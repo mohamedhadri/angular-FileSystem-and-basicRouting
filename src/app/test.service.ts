@@ -15,4 +15,7 @@ export class TestService {
   getTask(id: number): Observable<any> {
     return this.http.get('https://jsonplaceholder.typicode.com/todos/' + id, {observe: 'response'});
   }
+  getTasks(): Observable<any> {
+    return this.http.get('https://jsonplaceholder.typicode.com/todos/', {observe: 'response'});
+  }
 }

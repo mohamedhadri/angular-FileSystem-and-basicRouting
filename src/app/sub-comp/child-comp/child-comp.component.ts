@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, Input, OnChanges} from '@angular/core';
 import {TestService} from "../../test.service";
 
 @Component({
@@ -6,6 +6,10 @@ import {TestService} from "../../test.service";
   templateUrl: './child-comp.component.html',
   styleUrls: ['./child-comp.component.css']
 })
-export class ChildCompComponent {
+export class ChildCompComponent implements OnChanges{
+  @Input() todos: any[];
   selected = 'option2';
+  ngOnChanges() {
+    console.log(this.todos)
+  }
 }
