@@ -10,6 +10,7 @@ import { RouterModule } from '@angular/router';
 import { ChildCompComponent } from './sub-comp/child-comp/child-comp.component';
 import { SubCompComponent } from './sub-comp/sub-comp.component';
 import {AppRoutingModule} from "./app-routing.module";
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
     declarations: [
@@ -22,7 +23,8 @@ import {AppRoutingModule} from "./app-routing.module";
         BrowserAnimationsModule,
         SubCompModule,
       RouterModule.forRoot([]),
-      AppRoutingModule
+      AppRoutingModule,
+      HttpClientModule
 
     ]
 })

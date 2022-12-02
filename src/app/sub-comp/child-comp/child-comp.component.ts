@@ -8,7 +8,4 @@ import {TestService} from "../../test.service";
 })
 export class ChildCompComponent {
   selected = 'option2';
-  constructor(private testService: TestService) {
-    this.testService.get();
-  }
 }
